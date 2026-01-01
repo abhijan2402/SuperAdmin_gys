@@ -1,14 +1,10 @@
 import StatsCard from '@/components/StatsCard'
-import { useTenants } from '@/hooks/useTenants'
-import { useInvoices } from '@/hooks/useInvoices'
-import { useSupport } from '@/hooks/useSupport'
-import { usePlans } from '@/hooks/usePlans'
-import { useUsage } from '@/hooks/useUsage'
+
 import { Building2, DollarSign, Users, AlertCircle, TrendingUp, Clock, ArrowUpRight, Calendar, CheckCircle, CreditCard, Activity, Cloud, Server } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import StatusBadge from '@/components/StatusBadge'
-import { formatCurrency, formatDate } from '@/lib/utils'
+import { formatCurrency } from '@/lib/utils'
 import { useState, useEffect } from 'react'
 import { useGetDashboardQuery } from '@/redux/api/dashboardApi'
 

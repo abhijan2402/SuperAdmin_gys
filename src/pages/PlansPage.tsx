@@ -280,7 +280,7 @@ export default function PlansPage() {
 
       {/* Plans Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {plans.map((plan) => {
+        {plans.map((plan:any) => {
           const planTenants = tenants.filter((t) => t.planId === plan.id);
           const planRevenue = planTenants.reduce((sum, t) => sum + t.mrr, 0);
 
@@ -437,7 +437,7 @@ export default function PlansPage() {
                       name: "Merchandiser Management",
                       key: "merchandiserManagement",
                     },
-                  ].map((feature, index) => (
+                  ].map((feature:any, index) => (
                     <div
                       key={index}
                       className="flex items-center gap-2 text-sm"

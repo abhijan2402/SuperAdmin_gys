@@ -184,10 +184,9 @@ export default function SupportTicketsPage() {
     setAttachments((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleDownloadAttachment = (filename: string) => {
-    toast.info(`Downloading: ${filename}`);
-    // In production, fetch the actual file from server
-  };
+  // const handleDownloadAttachment = (filename: string) => {
+  //   toast.info(`Downloading: ${filename}`);
+  // };
 
   const handleExport = () => {
     const csvContent = [
@@ -201,7 +200,7 @@ export default function SupportTicketsPage() {
         "Created",
         "Replies",
       ].join(","),
-      ...filteredTickets.map((ticket) =>
+      ...filteredTickets.map((ticket: any) =>
         [
           ticket.id,
           ticket.tenantName,
@@ -227,13 +226,15 @@ export default function SupportTicketsPage() {
   };
 
   // Bulk operations
-  const toggleTicketSelection = (ticketId: number) => {};
+  const toggleTicketSelection = (ticketId: number) => {
+    console.log(ticketId);
+  };
 
   const toggleSelectAll = () => {
     if (selectedTickets.length === filteredTickets.length) {
       setSelectedTickets([]);
     } else {
-      setSelectedTickets(filteredTickets.map((t:any) => t.id));
+      setSelectedTickets(filteredTickets.map((t: any) => t.id));
     }
   };
 

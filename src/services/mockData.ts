@@ -1,8 +1,5 @@
 import type { Tenant } from '@/types/tenant'
-import type { Plan } from '@/types/plan'
-import type { Invoice } from '@/types/invoice'
 import type { UsageMetrics, SystemHealth } from '@/types/usage'
-import type { SupportTicket } from '@/types/ticket'
 
 
 // Mock Super Admin User
@@ -16,7 +13,7 @@ export const mockSuperAdmin: any = {
 };
 
 // Mock Plans
-export const mockPlans: Plan[] = [
+export const mockPlans: any[] = [
   {
     id: 'plan-1',
     name: 'Starter',
@@ -273,7 +270,7 @@ export const mockTenants: Tenant[] = [
 ]
 
 // Mock Invoices
-export const mockInvoices: Invoice[] = [
+export const mockInvoices: any[] = [
   {
     id: 'inv-1',
     tenantId: 'tenant-1',
@@ -399,7 +396,7 @@ export const mockSystemHealth: SystemHealth = {
 }
 
 // Mock Support Tickets
-export const mockSupportTickets: SupportTicket[] = [
+export const mockSupportTickets: any[] = [
   {
     id: 'ticket-1',
     tenantId: 'tenant-1',

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { mockTenants } from "@/services/mockData";
 import type { Tenant, TenantFormData, TenantStatus } from "@/types/tenant";
 import { toast } from "sonner";
 import {

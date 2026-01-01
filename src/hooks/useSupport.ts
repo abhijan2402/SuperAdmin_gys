@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { SupportTicket, TicketStatus, TicketReply } from "@/types/ticket";
+import type { SupportTicket } from "@/types/ticket";
 import { toast } from "sonner";
 import {
   useGetTicketListQuery,

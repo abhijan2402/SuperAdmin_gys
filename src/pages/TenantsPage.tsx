@@ -97,7 +97,7 @@ export default function TenantsPage() {
     );
   }
 
-  const filteredTenants = tenants?.filter((tenant) => {
+  const filteredTenants = tenants?.filter((tenant:any) => {
     const matchesSearch =
       tenant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       tenant.email.toLowerCase().includes(searchTerm.toLowerCase());
@@ -111,12 +111,7 @@ export default function TenantsPage() {
 
   // const activeTenants = tenants.filter(t => t.status === 'active').length
   // const trialTenants = tenants.filter(t => t.status === 'trial').length
-  const centralizedTenants = tenants?.filter(
-    (t) => t.deploymentType === "centralized"
-  )?.length;
-  const selfHostedTenants = tenants?.filter(
-    (t) => t?.deploymentType === "self-hosted"
-  )?.length;
+ 
   const totalMRR = tenants?.reduce((sum, t) => sum + t?.mrr, 0);
   const avgMRR = tenants?.length > 0 ? totalMRR / tenants?.length : 0;
 
@@ -391,7 +386,7 @@ export default function TenantsPage() {
       {/* Tenants Grid View */}
       {viewMode === "grid" && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTenants?.map((tenant) => {
+          {filteredTenants?.map((tenant:any) => {
             const plan = plans?.find((p) => p.id === tenant.planId);
             return (
               <Card
@@ -856,7 +851,7 @@ export default function TenantsPage() {
                     <SelectValue placeholder="Select a plan" />
                   </SelectTrigger>
                   <SelectContent>
-                    {plans?.map((plan) => (
+                    {plans?.map((plan:any) => (
                       <SelectItem key={plan.id} value={plan.id}>
                         {plan?.name} - {formatCurrency(plan?.monthly_price)}/mo
                       </SelectItem>

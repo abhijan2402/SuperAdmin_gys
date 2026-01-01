@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { mockInvoices } from "@/services/mockData";
-import type { Invoice, InvoiceFormData, InvoiceStatus } from "@/types/invoice";
+import type { Invoice, InvoiceFormData } from "@/types/invoice";
 import { toast } from "sonner";
 import {
   useCreateInvoicesMutation,

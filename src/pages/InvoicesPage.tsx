@@ -222,6 +222,7 @@ export default function InvoicesPage() {
   };
 
   const handleSendReminder = (invoice: Invoice) => {
+    console.log(invoice);
     setShowActionsMenu(null);
   };
 

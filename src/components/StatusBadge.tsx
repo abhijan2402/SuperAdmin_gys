@@ -49,7 +49,7 @@ export default function StatusBadge({ status, type = 'tenant' }: StatusBadgeProp
         case 'resolved':
         case 'closed':
           return 'success'
-        case 'in-progress':
+        case 'in_progress':
           return 'warning'
         case 'open':
           return 'default'
